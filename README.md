@@ -1,4 +1,4 @@
-# bing-wallpaper
+# bing-wallpaper-ubuntu
 This script download bing wallpaper and set it as ubuntu Desktop background.
 This program is written by Ahmad Abdollahzade . Use it , make it better and share it. 
 
