@@ -1,8 +1,8 @@
 # bing-wallpaper
-This program download bing wallpaper and put it on ubuntu Desktop backgroung
-This program is written by Ahmad Abdollahzade . Use it , make it better and share it . 
+This script download bing wallpaper and set it as ubuntu Desktop background.
+This program is written by Ahmad Abdollahzade . Use it , make it better and share it. 
 
-it download http://www.bing.com/ wallpaper and put it on Desktop background.
+it download http://www.bing.com/ wallpaper and set it as ubuntu Desktop background.
 
 First run these commands on terminal :
     sudo apt update
