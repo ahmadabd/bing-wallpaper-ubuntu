@@ -1,19 +1,23 @@
 import re
 import requests
 import BeautifulSoup
+import os
 
 def getLink():
-    baseUrl = "http://www.bing.com"          
-    imgUrl = "http://www.bing.com/HPImageArchive.aspx?format=xml&idx=1&n=1&mkt=en-US"
-    try:
-        html = requests.get(imgUrl)  # Get xml code .
-    except:
-        print "net is off"    # it runs if net is off .
+    if os.uname()[0] == "Linux":
+        baseUrl = "http://www.bing.com"          
+        imgUrl = "http://www.bing.com/HPImageArchive.aspx?format=xml&idx=1&n=1&mkt=en-US"
+        try:
+            html = requests.get(imgUrl)  # Get xml code .
+        except:
+            print "net is off"    # it runs if net is off .
+        else:
+            soup = BeautifulSoup.BeautifulSoup(html.content)     
+            link = soup.find('url',text = re.compile('(.jpg)$'))    #Get first <url> ... </url> string .
+            downLink = baseUrl + link   # make download link .
+            print downLink     
     else:
-        soup = BeautifulSoup.BeautifulSoup(html.content)     
-        link = soup.find('url',text = re.compile('(.jpg)$'))    #Get first <url> ... </url> string .
-        downLink = baseUrl + link   # make download link .
-        print downLink     
-
+        print "Your os should be Linux."
+        exit()
 getLink()
 
