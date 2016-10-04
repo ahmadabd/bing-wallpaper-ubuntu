@@ -1,19 +1,19 @@
-ng-wallpaper-ubuntu
+#bing-wallpaper-ubuntu
 ==========
-This script download bing wallpaper and set it as ubuntu Desktop background.;
+This script download bing wallpaper and set it as ubuntu Desktop background.
 ----------
-This program is written by Ahmad Abdollahzade . Use it , make it better and share it.; 
+This program is written by Ahmad Abdollahzade . Use it , make it better and share it. 
 ----------
-it download http://www.bing.com/ wallpaper and set it as ubuntu Desktop background.;
+it download http://www.bing.com/ wallpaper and set it as ubuntu Desktop background.
 ----------
 #Usage:
-First run these commands on terminal :;
-    `sudo apt update`;
-    `sudo apt install python-pip`;
-    `pip install BeautifulSoup4`;
-    `pip install requests`;
+First run these commands on terminal :
+    `sudo apt update`
+    `sudo apt install python-pip`
+    `pip install BeautifulSoup4`
+    `pip install requests`
 ---------
-run this program by execIndex.sh file:;
+run this program by execIndex.sh file:
 ```
     ./execIndex.sh
 ```
