@@ -3,7 +3,8 @@
 # This script is written by Ahmad Abdollahzade . use it , make it better and share it .
 
 # Get download link and store it on downLink .
-downLink=$(./index.py)
+address=$(pwd)
+downLink=$(python $address/index.py)
 
 # Set picture options
 # Valid options are: none,wallpaper,centered,scaled,stretched,zoom,spanned
