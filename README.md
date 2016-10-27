@@ -11,7 +11,7 @@ First run these commands on terminal :
 ```
     sudo apt update
     sudo apt install python-pip
-    pip install BeautifulSoup4
+    pip install BeautifulSoup
     pip install requests
 ```
 
