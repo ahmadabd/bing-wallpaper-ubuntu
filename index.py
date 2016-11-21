@@ -4,6 +4,9 @@ import requests
 import BeautifulSoup
 import os
 
+# bing wallpaper.
+# auther : Ahmad Abdollahzade (ahmadabd13741112@gmail.com)
+
 def getLink():
     if os.uname()[0] == "Linux":
         baseUrl = "http://www.bing.com"          
