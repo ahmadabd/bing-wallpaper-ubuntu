@@ -1,4 +1,5 @@
-#!/usr/bin/env python
+#!/usr/bin/python
+
 import re
 import requests
 import BeautifulSoup
@@ -14,14 +15,14 @@ def getLink():
         try:
             html = requests.get(imgUrl)  # Get xml code .
         except:
-            print "net is off"    # it runs if net is off .
+            print ("net is off")    # it runs if net is off .
         else:
             soup = BeautifulSoup.BeautifulSoup(html.content)     
             link = soup.find('url',text = re.compile('(.jpg)$'))    #Get first <url> ... </url> string .
             downLink = baseUrl + link   # make download link .
-            print downLink     
+            print (downLink)     
     else:
-        print "Your os should be Linux."
+        print ("Your os should be Linux.")
         exit()
 getLink()
 
