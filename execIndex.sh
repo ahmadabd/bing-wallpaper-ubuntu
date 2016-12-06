@@ -2,6 +2,10 @@
 
 # This script is written by Ahmad Abdollahzade . use it , make it better and share it .
 
+# export DBUS_SESSION_BUS_ADDRESS environment variable useful when the script is set as a cron job
+PID=$(pgrep gnome-session)
+export DBUS_SESSION_BUS_ADDRESS=$(grep -z DBUS_SESSION_BUS_ADDRESS /proc/$PID/environ|cut -d= -f2-) 
+
 # Get download link and store it on downLink .
 downLink=$(./index.py)
 
