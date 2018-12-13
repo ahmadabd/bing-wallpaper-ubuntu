@@ -7,12 +7,13 @@ it download http://www.bing.com/ wallpaper and set it as ubuntu Desktop backgrou
 
 #Usage:
 
+This script needs 'curl' that should be install.
+
 First run these commands on terminal :
 ```
     sudo apt update
     sudo apt install python-pip
-    pip install BeautifulSoup
-    pip install requests
+    pip install -r requirements.txt
 ```
 
 run this program by execIndex.sh file:
