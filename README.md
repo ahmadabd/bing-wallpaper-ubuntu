@@ -1,5 +1,5 @@
 ## bing-wallpaper-ubuntu
- 
+
 This script download bing wallpaper and set it as ubuntu Desktop background and stores all the pictures in a Pictures directory.
 This program is written by Ahmad Abdollahzade . Use it , make it better and share it. 
 
@@ -23,4 +23,5 @@ run this program by execIndex.sh file:
 
 ------------------
 Problems:
-[] dosent work with cron correctly after ubuntu 18.04
+
+- [ ] dosent work with cron correctly after ubuntu 18.04
