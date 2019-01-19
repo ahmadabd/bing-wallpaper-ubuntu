@@ -21,3 +21,6 @@ run this program by execIndex.sh file:
     ./execIndex.sh
 ```
 
+------------------
+Problems:
+[] dosent work with cron correctly after ubuntu 18.04
