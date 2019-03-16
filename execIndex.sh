@@ -5,10 +5,11 @@
 # auther : Ahmad Abdollahzade (ahmadabd13741112@gmail.com)
 
 # export DBUS_SESSION_BUS_ADDRESS environment variable useful when the script is set as a cron job
-#PID=$(pgrep gnome-session)
-#export DBUS_SESSION_BUS_ADDRESS=$(grep -z DBUS_SESSION_BUS_ADDRESS /proc/$PID/environ|cut -d= -f2-) 
+# PID=$(pgrep gnome-session)
+# export DBUS_SESSION_BUS_ADDRESS=$(grep -z DBUS_SESSION_BUS_ADDRESS /proc/$PID/environ|cut -d= -f2-) 
 
 # Get download link and store it on downLink variable.
+
 function foundDownLink()
 {
 python - << CODE
@@ -17,6 +18,7 @@ import os
 import json
 
 def getLink():
+    
     if os.uname()[0] == "Linux":
         baseUrl = "http://www.bing.com"          
         api = "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US"
@@ -38,17 +40,16 @@ CODE
 
 downLink=$(foundDownLink)
 
-# Making pic name .
-picName=$(echo $downLink | cut -f7 -d"/")
-
 # Set picture options
 # Valid options are: none,wallpaper,centered,scaled,stretched,zoom,spanned
 
 if [ $downLink != "net is off" ]
 then
     DIR="$HOME/Pictures/BingDesktopImagePython"	
-    FILE="$DIR/$picName"
+    FILE="$DIR/$RANDOM.jpg"
+
     mkdir -p $DIR
+
     # Download the link by wget .
     wget -O $FILE "$downLink" &> /dev/null
 
